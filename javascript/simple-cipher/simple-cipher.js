@@ -1,10 +1,18 @@
-var Cipher = function () {};
+var Cipher = function (str) {
+    if (str == null){
+        this.key = newKey();
+    } 
+    if (str)
+};
 
-Cipher.prototype.key = function(){
-    
-    var key = Math.random().toString(16).toLowerCase();
+var newKey = function(){
+    var set = "abcdefghijklmnopqrstuvwxyz";
+    var arr = set.split('');
+    var key = arr[Math.floor(Math.random()*arr.length)]
     return key;
 
 }
+
+//console.log(Cipher.prototype.key());
 
 module.exports = Cipher;
