@@ -7,9 +7,9 @@ Pangram.prototype.isPangram = function(){
   str = str.replace(/["'\s]+/g, '').toLowerCase();
   //var current = /[abcdefghijklmnopqrstuvwxyz]+/;
   for (var code = 97; code < 123; code++){
-    var current = new RegExp(String.fromCharCode(code));
+    // var current = new RegExp(String.fromCharCode(code));
 
-    if(!current.test(str)){
+    if(!str.includes(String.fromCharCode(code))){
       return false;
     }
   
